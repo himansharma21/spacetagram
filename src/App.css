@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 991px){
+  div.card{
+    width: 35em;
+  }
+  
+  img.card-img-top{
+    height: 35em;
+  }
+  
+}
+
+
+@media only screen and (min-width: 991px){
+  div.card{
+    width: 20em;
+  }
+  
+  img.card-img-top{
+    height: 20em;
+  }
+  
+}
+
+
+h1{
+  font-family: Futura;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Garamond;
+}
+
+h3{
+  font-style: italic;
+  font-family: Garamond;
+  text-align: left;
+  margin: 1rem;
+  font-size: larger;
+}
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+div.date{
+  right: 0px;
+  text-align: right;
+  padding: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+mark{
+  padding: 0pt;
+  margin: 0pt;
+  text-align: right;
+  background-color: rgb(252, 101, 63);
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+}
+
+div.explanation-div{
+  text-align: left;
+  font-family: Garamond;
+
+}
+
+i.bi-heart{
+  color: red;
+  margin-left: 2px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+div.row{
+  width: 100%;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+div.card{
+  margin: 1rem;
+  outline: none;
+  border: none;  
+  border-radius: 0;
+}
+
+div.card-body{
+  padding: 0px;
+  outline: none;
+}
+
+img.card-img-top{
+  object-fit: cover;
+  border-radius: 10px;
+}

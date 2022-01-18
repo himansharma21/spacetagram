@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  align-items: center;
 }
 
 .App-logo {
@@ -8,29 +7,10 @@
   pointer-events: none;
 }
 
-@media only screen and (max-width: 991px){
-  div.card{
-    width: 20em;
-  }
-  
-  img.card-img-top{
-    height: 20em;
-  }
-  
+@font-face {
+  font-family: Futura;
+  src: url(fonts/Futura.ttc);
 }
-
-
-@media only screen and (min-width: 991px){
-  div.card{
-    width: 20em;
-  }
-  
-  img.card-img-top{
-    height: 20em;
-  }
-  
-}
-
 
 h1{
   font-family: Futura;
@@ -39,35 +19,38 @@ h1{
   text-transform: uppercase;
 }
 
-h2 {
-  font-family: Garamond;
+* {
+  font-family: Cochin, Cambria, Georgia, Times, 'Times New Roman', serif;
 }
 
-h3{
+h2{
+  font-size: large;
+}
+
+h3.card-title{
   font-style: italic;
-  font-family: Garamond;
   text-align: left;
-  margin: 1rem;
   font-size: larger;
+  width: 20rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Garamond, Georgia, 'Times New Roman', Times, serif;
 }
 
 div.date{
-  right: 0px;
   text-align: right;
-  padding: 0px;
-  font-family: 'Courier New', Courier, monospace;
   margin-left: auto;
   margin-right: 0;
 }
 
 mark{
   padding: 0pt;
-  margin: 0pt;
   text-align: right;
+  font-family: 'Courier New', Courier, monospace;
   background-color: rgb(252, 101, 63);
 }
 
@@ -78,8 +61,11 @@ mark{
 
 div.explanation-div{
   text-align: left;
-  font-family: Garamond;
+}
 
+div.image-tile{
+  width: 20em;
+  margin: 1rem;
 }
 
 i.bi-heart{
@@ -98,23 +84,6 @@ div.row{
   width: 100%;
 }
 
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -125,7 +94,6 @@ div.row{
 }
 
 div.card{
-  margin: 1rem;
   outline: none;
   border: none;  
   border-radius: 0;
@@ -137,6 +105,8 @@ div.card-body{
 }
 
 img.card-img-top{
+  width: 20em;
+  height: 20em;
   object-fit: cover;
   border-radius: 10px;
 }

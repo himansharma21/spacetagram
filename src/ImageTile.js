@@ -7,16 +7,6 @@ function ImageTile(props){
     const [isExpanded, expand] = useState(false);
     const [isLiked, like] = useState(false);
 
-    var imageTitle; 
-    const MAX_LENGTH = 30;
-    const adjustName = () =>{
-        if(props.title && props.title.length > MAX_LENGTH){
-            imageTitle = props.title.substring(0,45)+'...';
-        }else{
-            imageTitle = props.title;
-        }
-    }
-
     var isDoubleClick = false;
     var timer = 0
     const DELAY = 200
@@ -38,15 +28,15 @@ function ImageTile(props){
         }
     }
 
-    adjustName();
+    //adjustName();
     return(
-    <div>
-        <h3 class='card-title'>{imageTitle}</h3>
-        <div class="card">
+    <div className = "image-tile">
+        <h3 className ='card-title'>{props.title}</h3>
+        <div classNmae ="card">
             <div>
                 <img src= {props.url} class="card-img-top" alt="..." onClick={(e)=>handleClick(e)}/>
             </div>
-            <div className='card-body' id={props.title}>
+            <div className='card-body'>
                 <div className = 'card-body'>
                     <div className='bottom-bar d-flex'>
                         <Fade in={isLiked}>
@@ -60,7 +50,7 @@ function ImageTile(props){
                     </div>
                     <Collapse in={isExpanded}>
                         <div className="explanation-div">
-                           {props.explanation}
+                           <p>{props.explanation}</p>
                         </div>
                     </Collapse>
                 </div>

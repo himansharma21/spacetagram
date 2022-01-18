@@ -2,7 +2,7 @@
   "name": "shopify-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/himansharma21/spacetagram",
+  "homepage": "https://himansharma21.github.io/spacetagram",
   "dependencies": {
     "@shopify/polaris": "^7.5.0",
     "@testing-library/jest-dom": "^5.16.1",

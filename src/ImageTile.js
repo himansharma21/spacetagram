@@ -1,4 +1,3 @@
-import react from 'react';
 import {useState} from 'react';
 import {Collapse, Fade} from 'react-bootstrap'
 
@@ -23,7 +22,7 @@ function ImageTile(props){
     const DELAY = 200
     const handleClick = (e) => {
         console.log(e.detail)
-        if(e.detail == 1){
+        if(e.detail === 1){
             timer = setTimeout(()=>{
                 if(!isDoubleClick){
                     expand(~isExpanded)

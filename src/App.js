@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import ImageTile from './ImageTile.js'
@@ -21,7 +20,7 @@ function App() {
       var url = new URL(NASA_API_EP);
       var params = { api_key: API_KEY, count: 10 }
       url.search = new URLSearchParams(params).toString();
-      const imageData = fetch(url, {
+      fetch(url, {
         method: 'GET',
       }).then((response) => response.json())
         .then((result) => {
@@ -45,7 +44,7 @@ function App() {
             <Fade in={!isLoading}>
               <div className='row center justify-content-center'>
                 {Array.from(data).map(row =>
-                        row.media_type == 'image'?
+                        row.media_type === 'image'?
                         (<ImageTile title = {row.title} time = {row.date} explanation={row.explanation} url={row.url}></ImageTile>):null
                     )}
               </div>

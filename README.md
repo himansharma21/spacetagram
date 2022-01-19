@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Spacetagram
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-app built on the [NASA APOD](https://apod.nasa.gov/apod/astropix.html) API. Displays a gallery of images from NASA APOD collection. 
 
-## Available Scripts
+Click [**HERE**](https://himansharma21.github.io/spacetagram/) to see it in action.
 
-In the project directory, you can run:
+## Usage 
+- Single tap images to expand the explanation for each image
+- Double tap images to like 
 
-### `npm start`
+## Extras 
+- Features an infinite scrolling experience! New images will automatically be fetched when you get to the bottom of a page.
+  - Automatic fetching is limited to 100 images to reduce API usage. This is not due to technical limitations.
+-  Loading states and transitions. The app communicates with the user when it is loading new data and when it is ready. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running locally 
+Built and tested on Node version `17.x.x`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installing
+Install the required packages with: 
+```
+npm install
+```
 
-### `npm test`
+### API Key
+Change the value of `REACT_APP_NASA_API_KEY` in `.env.example` to your API key. Do this by replacing `YOUR_API_KEY_HERE` with your API key. Afterwards run: 
+```
+mv .env.example .env
+```
+If this does not work you could manually create a `.env` file and paste the contents of `.env.example` inside.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Remember to remove any keys inside `.env.example` before you commit it publicly. 
 
-### `npm run build`
+### Starting
+After installing the required packages you can run the web-app with: 
+```
+npm start
+```
+Visit [`localhost:3000`](http://localhost:3000/) to view the web-app. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can change `homepage` in `package.json` to your own Github pages URL. Then you may run: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm run deploy
+```
+to deploy the web-app.

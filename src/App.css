@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 1000px;
 }
 
 @font-face {
@@ -41,12 +37,6 @@ p{
   font-family: Garamond, Georgia, 'Times New Roman', Times, serif;
 }
 
-div.date{
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-}
-
 mark{
   padding: 0pt;
   text-align: right;
@@ -54,10 +44,21 @@ mark{
   background-color: rgb(252, 101, 63);
 }
 
+i.bi-heart-fill{
+  color: rgb(252, 47, 91);
+  margin-left: 2px;
+}
+
+button.no-border{
+  background-color: white;
+  border: none;
+}
+
 .center {
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
+
 
 div.explanation-div{
   text-align: left;
@@ -68,29 +69,14 @@ div.image-tile{
   margin: 1rem;
 }
 
-i.bi-heart{
-  color: red;
-  margin-left: 2px;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 div.row{
   width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.date{
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 div.card{

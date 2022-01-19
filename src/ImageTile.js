@@ -10,12 +10,11 @@ function ImageTile(props){
     var isDoubleClick = false;
     var timer = 0
     const DELAY = 200
-    const handleClick = (e) => {
-        console.log(e.detail)
+    const handleClick = async (e) => {
         if(e.detail === 1){
             timer = setTimeout(()=>{
                 if(!isDoubleClick){
-                    expand(~isExpanded)
+                    expand(!isExpanded)
                 }
             }, DELAY)
         }else if(e.detail >= 2){
@@ -28,20 +27,19 @@ function ImageTile(props){
         }
     }
 
-    //adjustName();
     return(
-    <div className = "image-tile">
+    <div className = 'image-tile'>
         <h3 className ='card-title'>{props.title}</h3>
-        <div classNmae ="card">
+        <div className ="card">
             <div>
-                <img src= {props.url} class="card-img-top" alt="..." onClick={(e)=>handleClick(e)}/>
+                <img src= {props.url} className ='card-img-top' alt='...' onClick={(e)=>handleClick(e)}/>
             </div>
             <div className='card-body'>
                 <div className = 'card-body'>
                     <div className='bottom-bar d-flex'>
                         <Fade in={isLiked}>
                             <div>
-                                <i class="bi bi-heart"></i>
+                                <i className='bi bi-heart-fill'></i>
                             </div>
                         </Fade>
                         <div className='date'>
@@ -49,7 +47,7 @@ function ImageTile(props){
                         </div>
                     </div>
                     <Collapse in={isExpanded}>
-                        <div className="explanation-div">
+                        <div className='explanation-div'>
                            <p>{props.explanation}</p>
                         </div>
                     </Collapse>

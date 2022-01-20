@@ -43,6 +43,7 @@ Visit [`localhost:3000`](http://localhost:3000/) to view the web-app.
 You can change `homepage` in `package.json` to your own Github pages URL. Then you may run: 
 
 ```
+npm run build
 npm run deploy
 ```
 to deploy the web-app.

@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import ImageTile from './ImageTile.js'
 import { Collapse, Fade } from 'react-bootstrap';
 
@@ -15,6 +15,7 @@ function App() {
   const [isInit, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
 
+  // Fetches data. init param checks if the data fetch is on initialization. 
   const fetchData = async (init) => {
     if (init) {
       setIsLoading(true);
@@ -41,13 +42,13 @@ function App() {
   useEffect(() => {
     fetchData(true);
   }, 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   [setData]);
 
   const handleClick = () => {
     fetchData(false);
   }
 
+  // fetches data when user scrolls to the bottom
   const onScroll = async (event) => {
     if ((window.innerHeight + window.scrollY) >= event.target.body.scrollHeight && data.length < MAX_CONTENT) {
       fetchData(false);
@@ -55,6 +56,8 @@ function App() {
     }
   }
 
+
+  //required for attaching a listener to window
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
   });

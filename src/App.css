@@ -3,6 +3,10 @@
   height: 1000px;
 }
 
+:root {
+  --tile-size: clamp(20rem, 8vw + 10rem, 24rem);
+}
+
 @font-face {
   font-family: Futura;
   src: url(fonts/Futura.ttc);
@@ -27,7 +31,7 @@ h3.card-title{
   font-style: italic;
   text-align: left;
   font-size: larger;
-  width: 20rem;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -59,13 +63,18 @@ button.no-border{
   width: 100%;
 }
 
+.container.center {
+  max-width: 1400px;
+}
+
 
 div.explanation-div{
   text-align: left;
 }
 
 div.image-tile{
-  width: 20em;
+  width: var(--tile-size);
+  max-width: 100%;
   margin: 1rem;
 }
 
@@ -91,8 +100,9 @@ div.card-body{
 }
 
 img.card-img-top{
-  width: 20em;
-  height: 20em;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 10px;
 }
